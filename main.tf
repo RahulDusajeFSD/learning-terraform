@@ -1,3 +1,8 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+
 data "aws_ami" "app_ami" {
   most_recent = true
 
@@ -17,7 +22,7 @@ data "aws_ami" "app_ami" {
 resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
 
-  region        = "us-east-1"
+  
   instance_type = var.instance_type
 
 
