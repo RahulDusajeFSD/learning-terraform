@@ -16,7 +16,12 @@ data "aws_ami" "app_ami" {
 
 resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
+
+  region        = "us-east-1"
   instance_type = var.instance_type
+
+  instance_type = var.instance_type
+
 
   tags = {
     Name = "HelloWorld"
