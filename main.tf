@@ -20,8 +20,6 @@ resource "aws_instance" "blog" {
   region        = "us-east-1"
   instance_type = var.instance_type
 
-  instance_type = var.instance_type
-
 
   tags = {
     Name = "HelloWorld"
